@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script src="../isNumeric.js"></script>
+<script type="module">
+
+  import { isNumeric } from '../isNumeric.js'
+
+  console.log(isNumeric(10))
+  console.log(isNumeric('?21310493$#$@'))
+  console.log(isNumeric(NaN))
+  console.log(isNumeric('100.3'))
+  console.log(isNumeric(Infinity))
+  console.log(isNumeric(-Infinity))
+
+</script>
+</body>
+</html>

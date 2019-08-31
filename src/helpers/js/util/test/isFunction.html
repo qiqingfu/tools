@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script type="module">
+
+  import { isFunction } from '../isFunction.js'
+
+  function fn1() {}  // 普通函数
+  function Fn2() {}  // 构造函数
+  function* fn3() {}
+
+  console.log(isFunction(fn1))
+  console.log(isFunction(Fn2))
+  console.log(isFunction(fn3))
+  console.log(isFunction(Math.max))
+
+</script>
+</body>
+</html>

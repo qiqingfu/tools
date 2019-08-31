@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script type="module">
+
+  import {isEmptyObject} from '../isEmptyObject.js'
+
+  const o1 = {}
+  const o2 = {a: 1}
+  const o3 = Object.create(null)
+  const o4 = new Object()
+
+  console.log(isEmptyObject(o1))
+  console.log(isEmptyObject(o2))
+  console.log(isEmptyObject(o3))
+  console.log(isEmptyObject(o4))
+</script>
+</body>
+</html>
