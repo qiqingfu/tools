@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script type="module">
+
+  import {isFormData} from "../isFormData.js"
+
+  const form1 = {a: 1}
+  console.log(isFormData(form1))
+
+  const formData = new FormData()
+  formData.append('file', '111')
+
+  console.log(isFormData(formData))
+
+</script>
+</body>
+</html>

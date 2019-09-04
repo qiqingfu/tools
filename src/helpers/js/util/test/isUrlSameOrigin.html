@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script type="module">
+
+  import {isUrlSameOrigin} from '../isUrlSameOrigin.js'
+
+  const url = 'https://www.baidu.com'
+
+  console.log(isUrlSameOrigin(window.location.href)) // true
+  console.log(isUrlSameOrigin(url)) // false
+</script>
+</body>
+</html>
