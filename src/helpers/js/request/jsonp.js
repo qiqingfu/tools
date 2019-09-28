@@ -13,7 +13,7 @@ export function jsonp(url, options) {
     let count = 0
 
     let {
-      jsonpCallback = 'callback',
+      callback = 'jsonpCallback',
       prefix = '__jp',
       timeout = 5000,
       params = {}
@@ -51,7 +51,7 @@ export function jsonp(url, options) {
       str += `&${key}=${encodeURIComponent(value)}`
     }
     url = url + (url.indexOf('?') > 0 ? '&' : '?') + str.slice(1)
-    url = `${url}&${jsonpCallback}=${name}`
+    url = `${url}&${callback}=${name}`
 
     const script = document.createElement('script')
     script.src = url
