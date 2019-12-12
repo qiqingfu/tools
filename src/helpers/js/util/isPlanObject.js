@@ -3,18 +3,29 @@
  * @date 2019-08-30 18:08
  */
 
-/**
- * 判断一个对象是不是通过 {} 字面量或 new Object()创建的
- */
 
 /**
  * @param obj {object}
  * @return {boolean}
  */
+
+ const toStr = Object.prototype.toString;
+ const hasOwn = Object.prototype.hasOwnProperty;
+
 export function isPlanObject(obj) {
-  if (typeof (obj) !== "object" || obj === null || obj === undefined || obj === obj.window || obj.nodeType) {
-    return false
+  if (!obj || toStr.call(obj) !== '[object Object]') {
+    return false;
   }
-  return !(obj.constructor
-    && !Object.prototype.hasOwnProperty.call(obj.constructor.prototype, 'isPrototypeOf'));
+
+  const hasOwnConstructor = hasOwn.call(obj, 'construcotr')
+  const hasIsPrototypeOf = obj.constructor && obj.constructor.prototype && hasOwn.call(obj.constructor.prototype, 'isPrototypeOf')
+
+  if (obj.constructor && !hasOwnConstructor && !hasIsPrototypeOf) {
+    return false;
+  }
+
+  let key;
+  for (key in obj) {/** */}
+
+  return key === undefined || hasOwn.call(obj, key)
 }
