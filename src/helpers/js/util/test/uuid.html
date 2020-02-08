@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="module">
+
+    import uuid from '../uuid.js';
+
+    // console.log(uuid())
+    // console.log(uuid(10));
+    // console.log(uuid(10, {
+    //   radix: 58
+    // }));
+    // console.log(uuid(10, {
+    //   fmt: 'n'
+    // }));
+    // console.log(uuid(10, {
+    //   fmt: 'n-u'
+    // }), 'n-u');
+    // console.log(uuid(10, {
+    //   fmt: 'n-l'
+    // }), 'n-l');
+    // console.log(uuid(30, {
+    //   fmt: 'u'
+    // }), 'u');
+    console.log(uuid(48, {
+      fmt: 'u-l'
+    }), 'u-l 48');
+
+  </script>
+</body>
+</html>
