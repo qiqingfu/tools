@@ -38,7 +38,6 @@ export default function uuid(len, options = {}) {
           return char.substr(10, 26);
         },
         u: function() {
-          console.log(char.substr(36, 26), "u function");
           return char.substr(36, 26);
         },
         "n-l": function() {
