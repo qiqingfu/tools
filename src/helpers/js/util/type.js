@@ -4,8 +4,9 @@
  */
 
 export function type(item) {
-  const reTypeOf = /(?:^\[object\s(.*?)\]$)/
-  return Object.prototype.toString.call(item)
-    .replace(reTypeOf, '$1')
-    .toLowerCase()
+  const reTypeOf = /(?:^\[object\s(.*?)\]$)/;
+  return Object.prototype.toString
+    .call(item)
+    .replace(reTypeOf, "$1")
+    .toLowerCase();
 }

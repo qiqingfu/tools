@@ -21,3 +21,5 @@ const Type = (() => {
 
   return type;
 })();
+
+export default Type;

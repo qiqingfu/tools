@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="module">
+      import deepCopy from "../deepCopy.js";
+
+      const obj1 = {
+        a: 1,
+        b: {
+          c: 2,
+          d: 3,
+          e: [1, 2, 3]
+        }
+      };
+
+      const obj2 = deepCopy(obj1);
+      obj1.b.e.push(4);
+      obj1.b.f = 4;
+      console.log("obj2", obj2);
+      console.log("obj1", obj1);
+    </script>
+  </body>
+</html>
